@@ -1,0 +1,54 @@
+<DOCTYPE! html>
+<html>
+<head>
+<center>
+	<input type="search" id="search" name="search" />
+	<input type="tel" id="tel" name="tel" />
+	<video width="320" height="240" controls>
+     <source src="christ_video_sample.mp4" type="video/mp4">
+     Your browser does not support the video tag.
+     </video>
+	<br>
+	<p style="text-align:justify"> Address: Dharmaram College Post, 1st Main Rd, S.G. Palya, Bengaluru, Karnataka 560029: Ph: 099457 85420</p>
+	<img src="school4.jpg"  alt="School" width="370" height="280" usemap="#schoolmap">
+	<map name="schoolmap">
+		<area shape="rect" coords="0,0,270,350" alt="School"  href="https://www.christmysore.in/aboutchristpublicschool">
+	</map>
+	<br>
+	<a href="C:\Users\BARS\OneDrive\Desktop\Sem 2\html\Lab_1_Frame_1_Link.html">For Admission details, Click Here!</a>
+	<br>
+	<audio controls>
+     <source src="sample_audio.mp3" type="audio/mp3">
+	Your browser does not support the audio element.
+	</audio>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.strokeText("Location!", 10, 50);
+</script>
+	<button onclick="getLocation()">Location</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+
+</center>		
+</head>
+</html> 
